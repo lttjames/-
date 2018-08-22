@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Questions</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <link href="Question.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+    <script src="Question.js"></script>
+</head>
+
+<body>
+<div class="nav" id="nav">
+    <img src="Demo_img/title.png" height="30px" style="float: left ; margin: auto 10px ; margin-left: 20px ; margin-top: 3px" >
+    <ul>
+        <li id="navblock1"><a href="Regester.html">成员管理</a>
+            <ul>
+                <li><a href="Regester.html">注册</a></li>
+                <li><a href="Attendance.html">签到</a></li>
+            </ul>
+        </li>
+        <li id="navblock2"><a href="Questions.html">解决问题</a></li>
+        <li id="navblock3">业务知识
+            <ul>
+                <li><a href="Authentication.html">锐捷认证</a></li>
+                <li><a href="OS_installation.html">装系统</a></li>
+                <li><a href="Laptop.html">选购笔记本</a></li>
+                <li><a href="Network_Acknowledge.html">网络基础</a></li>
+            </ul>
+        </li>
+        <li id="navblock4"><a href="http://202.206.223.120:8080/sam/" target="_blank">管理系统</a></li>
+        <li id="navblock5"><a href="Team.html">我要组队</a>
+            <ul>
+                <li><a href="Competition_Time.html">竞赛时间</a></li>
+                <li><a href="Team.html">竞赛/实践</a></li>
+            </ul>
+        </li>
+        <li id="navblock6"><a href="Learn_Something.html">技术学习</a></li>
+        <li id="navblock7"><a href="Community.html">社团文化</a></li>
+    </ul>
+    <select id="nav_color_menu">
+        <option value="">Color</option>
+        <option value="blue"style="background-color: blue">Color</option>
+        <option value="black"style="background-color: black">Color</option>
+        <option value="violet"style="background-color: violet">Color</option>
+        <option value="yellow"style="background-color: yellow">Color</option>
+        <option value="green"style="background-color: green">Color</option>
+        <option value="deeppink"style="background-color: deeppink">Color</option>
+    </select>
+</div>
+
+
+
+<div id="top_shadow"></div>
+
+
+
+
+<div id="div_img">
+
+
+
+
+    <div id="notice_bar">
+        <div class="notice_bar_icon_left" id="notice_bar_icon1">
+            <img src="Question_img/notice_bar_icon01.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+        </div>
+        <div class="notice_bar_icon_left" id="notice_bar_icon2">
+            <img src="Question_img/bell.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+        </div>
+        <div id="notice_bar_text">
+            <p class="notice_bar_p">这里将显示最新的公告</p>
+        </div>
+        <div class="notice_bar_icon_right" id="notice_bar_icon3">
+            <img src="Question_img/add.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+        </div>
+    </div>
+
+
+    <div id="tell_something">
+        <div class="notice_item" id="notice_add">
+            <img src="Question_img/add.png" style="height: 40px ; margin: 5px 45%">
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/next.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p>学14舍</p>
+                <p>212</p>
+                <p>没有买交换机上不了网</p>
+                <p>联系电话：1234567890</p>
+                <p>2018-8-11</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/next.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p>待办事项2</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/next.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p>待办事项3</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/next.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p>待办事项4</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/next.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p>待办事项5</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/next.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p>待办事项6</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="notice_change">
+        <div class="notice_item" id="notice_add" onclick="alert_notice_change()">
+                <img src="Question_img/add.png" style="height: 40px ; margin: 5px 45%">
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/bell.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p class="notice_bar_p">这是公告0</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="alert_notice_change()">
+                <img src="Question_img/change.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/bell.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p class="notice_bar_p">这是公告1</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="alert_notice_change()">
+                <img src="Question_img/change.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/bell.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p class="notice_bar_p">这是公告2</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="alert_notice_change()">
+                <img src="Question_img/change.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/bell.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p class="notice_bar_p">这是公告3</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="alert_notice_change()">
+                <img src="Question_img/change.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+        <div class="notice_item">
+            <div class="notice_bar_icon_left" >
+                <img src="Question_img/bell.png" style="height: 40px ; margin: 5px ; margin-left: 10px">
+            </div>
+            <div id="notice_bar_text">
+                <p class="notice_bar_p">这是公告4</p>
+            </div>
+            <div class="notice_bar_icon_right" onclick="alert_notice_change()">
+                <img src="Question_img/change.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+            <div class="notice_bar_icon_right" onclick="solution_submmit()">
+                <img src="Question_img/close.png" style="height: 40px ; margin: 5px ; margin-right: 10px">
+            </div>
+        </div>
+    </div>
+
+
+    <div id="question_and_solution">
+        <div id="question_box">
+            <p>Questions</p>
+            <br>
+            <ul>
+                <li class="question_item" id="question_item_0">+</li>
+                <li class="question_item" id="question_item_1">无法连接认证服务器</li>
+                <li class="question_item" id="question_item_2">获取IP信息失败</li>
+                <li class="question_item" id="question_item_3">IP/MAC地址绑定错误</li>
+                <li class="question_item" id="question_item_4">动态IP地址类型绑定错误</li>
+                <li class="question_item" id="question_item_5">网卡错误/找不到网卡</li>
+                <li class="question_item" id="question_item_6">接入设备IPv4地址类型绑定错误</li>
+                <li class="question_item" id="question_item_7">QQ等软件可以上网，但是浏览器上不去网</li>
+            </ul>
+        </div>
+        <div id="solution_box">
+            <p>Solutions</p>
+            <br>
+            <ul>
+                <li class="solution_item" id="solution_item_0">
+                    <p>你遇到了什么问题？</p>
+                    <textarea id="solution_text_01"></textarea>
+                    <p>怎样去解决它呢？</p>
+                    <textarea id="solution_text_02"></textarea>
+                    <button id="solution_text_submmit" onclick="solution_submmit()">提交</button>
+                </li>
+                <li class="solution_item" id="solution_item_1">
+                    <p>这种情况多是物理连接上的问题。</p>
+                    <p>如果是几个宿舍/一个宿舍/一个人出现问题，就检查楼层交换机报告304/检查宿舍到交换机的端口/换位测试。</p>
+                    <p>如果是个人电脑的问题，卸载WIFI共享软件、代理软件和游戏加速器/检查客户端版本（4.85）/重装网卡和锐捷客户端。</p>
+                </li>
+                <li class="solution_item" id="solution_item_2">这种情况需要检查计算机能否获取到IP以及客户端能不能获取到IP
+                    <p>确认IP自动获取
+                        是否DHCP服务
+                        WIFI共享软件/游戏加速器
+                        重装网卡和锐捷客户端
+                        以管理员身份启动CMD
+                        键入 netsh winsock reset
+                        netsh int ip reset</p>
+                </li>
+                <li class="solution_item" id="solution_item_3">更换宿舍（接入设备ipv4地址绑定错误）
+                    更换电脑
+                    更换主板/网卡
+                    教师更换电脑
+                    （左一）携带学生证件在工作时间到一校网管中心解绑或者拨打2900解决问题
+                    （左二）核对信息，去304找部门负责人解绑
+                    固定IP用户需要先检查其IP是否输入正确
+                </li>
+                <li class="solution_item" id="solution_item_4">确认IP自动获取
+                    如果IP是169.x.x.x,如果是的话就重装网卡后重新认证
+                    重装网卡驱动
+                    重装锐捷客户端（4.85)
+                </li>
+                <li class="solution_item" id="solution_item_5">
+                    锐捷客户端在匹配网卡时出现错误
+                    没有连好网线
+                    卸载WIFI共享软件、代理软件以及游戏加速器
+                    禁用多余的网卡，只保留“本地连接”
+                    重装网卡以及锐捷客户端
+
+                </li>
+                <li class="solution_item" id="solution_item_6"></li>
+                <li class="solution_item" id="solution_item_7"></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id="content">
+
+
+
+    <div id="operation_div">
+        <div id="operation">
+            <a href="#div_img"><div class="operation_block1" id="logo_block"><img src="Question_img/logo_blue.jpg" width="110px" height="110px"></div></a>
+            <div class="operation_block1" style="background-color: whitesmoke" id="file_block"><img src="Question_img/file.png" height="110px" style="margin-left: 10px"></div>
+            <a href="#IP_search">
+                <div class="operation_block2" style="background-color: deeppink ; text-align: center">
+                    <p style = "font-size: 55px ; font-family: 'Microsoft JhengHei' ; color: white"><strong>IP/DNS</strong></p>
+                    <p style="color: white">查看/自动获取</p>
+                </div>
+            </a>
+            <div class="operation_block1" style="background-color: mediumblue ; text-align: center">
+                <p style="font-size: 50px ; color: white">网线</p>
+                <p style="color: white">测验器</p>
+            </div>
+            <div class="operation_block1" style="background-color: whitesmoke" id="download_block"><img src="Question_img/Download.png" width="110px"></div>
+            <a href="#ping_derect">
+                <div class="operation_block2" style="background-color: blue ; text-align: center">
+                    <p style="font-size: 60px ; font-family: 'Microsoft JhengHei' ; color: white"><strong>Ping</strong></p>
+                    <p style="color: white">指令详解</p>
+                </div>
+            </a>
+            <a href="http://www.baidu.com" target="_blank">
+                <div class="operation_block1" style="background-color: whitesmoke" id="bird_block"><img src="Question_img/bird.png" width="110"></div>
+            </a>
+            <div class="operation_block1"  id="OS_block" style="background-color: cornflowerblue ; text-align: center">
+                <p style = "font-size: 60px ; font-family: 'Microsoft JhengHei' ; color: white"><strong>OS</strong></p>
+                <p style="color: white">Installation</p>
+            </div>
+            <a href="#mac_select">
+                <div class="operation_block2" style="background-color: gold ; text-align: center">
+                <p style = "font-size: 55px ; font-family: 'Microsoft JhengHei' ; color: white"><strong>MAC</strong></p>
+                <p style="color: white">查看/修改/作弊</p>
+                </div>
+            </a>
+
+            <div class="operation_block1"  id="out_block" style="background-color: deeppink ; text-align: center">
+                <p style = "font-size: 50px ; font-family: 'Microsoft JhengHei' ; color: white"><strong>外勤</strong></p>
+                <p style="color: white">Location</p>
+            </div>
+            <a href="#DHCP_search">
+                <div class="operation_block1" id="DHCP_block" style="background-color: salmon ; text-align: center">
+                    <p style = "font-size: 36px ; font-family: 'Microsoft JhengHei' ; color: white ; margin-top: 10px"><strong>DHCP</strong></p>
+                    <p style="color: white">Service</p>
+                </div>
+            </a>
+            <a href="http://202.206.223.120:8080/sam/" target="_blank">
+                <div class="operation_block2"  id="RG_SAM_block" style="background-color: darkgreen ; text-align: center">
+                    <p style = "font-size: 50px ; font-family: 'Microsoft JhengHei' ; color: white"><strong>RG-SAM</strong></p>
+                    <p style="color: white">查看账户/修改密码</p>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+
+    <div id="step">
+        <div style="width: 100% ; text-align: center">
+            <p id="step_title">什么，这些操作你还不会，家里有矿啊！</p>
+        </div>
+
+
+
+
+
+        <div class="step_div" id="IP_search">
+            <big>查看本机的IP/MAC地址</big>
+            <div class="step_div_half">
+                <p>1.使用WIN+R打开“运行”对话框</p>
+                <p>2.输入“cmd”，回车</p>
+                <p>3.输入“ipconfig/all”回车</p>
+                <p>4.也可以输入“getmac”得到本机的mac地址。</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+        <div class="step_div">
+            <big>查看本机的IP/MAC地址</big>
+            <div class="step_div_half">
+                <p>1.控制面板——网络和Internet</p>
+                <p>2.打开网络和共享中心</p>
+                <p>3.选择正在使用的网卡</p>
+                <p>4.点击详细信息</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+        <div class="step_div">
+            <big>设置IP/DNS为自动获取</big>
+            <div class="step_div_half">
+                <p>1.控制面板</p>
+                <p>2.网络和Internet</p>
+                <p>3.网络和共享中心</p>
+                <p>4.更改适配器设置</p>
+                <p>5.打开对应的网卡</p>
+                <p>6.属性-选中IPv4-属性</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+        <div class="step_div">
+            <big id="mac_select">修改本机的mac地址</big>
+            <div class="step_div_half">
+                <p>1.网络和共享中心</p>
+                <p>2.打开使用的网卡</p>
+                <p>3.打开属性</p>
+                <p>4.打开配置</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+        <div class="step_div">
+            <big>重装网卡驱动</big>
+            <div class="step_div_half">
+                <p>1.右击——管理</p>
+                <p>2.选择“设备管理器”</p>
+                <p>3.选择“网络适配器”（网卡）</p>
+                <p>4.选择“卸载”</p>
+                <p>5.选择“操作”—“扫描硬件改动”</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+        <div class="step_div">
+            <big>查询用户信息/重置用户密码</big>
+            <div class="step_div_half">
+                <p>登陆RG-SAM管理系统</p>
+                <p>1.查询到该用户</p>
+                <p>2.更多操作</p>
+                <p>3.查询/密码重置</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+        <div class="step_div">
+            <big id="DHCP_search">查看/打开DHCP服务</big>
+            <div class="step_div_half">
+                <p>1.使用WIN+R打开命令提示符</p>
+                <p>2.输入“services.msc”回车</p>
+                <p>3.找到DHCP服务并开启</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+
+
+        <div class="step_div">
+            <big>查看/打开DHCP服务</big>
+            <div class="step_div_half">
+                <p>1.打开“控制面板”</p>
+                <p>2.打开“系统和安全”</p>
+                <p>3.打开“管理工具”</p>
+                <p>4.开打“服务”</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+
+        <div class="step_div">
+            <big id="ping_derect">Ping命令使用</big>
+            <div class="step_div_half">
+                <p>1.首先用快捷键win+R调出运行命令框，输入cmd，点击确定，会弹出DOS窗口。</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+        <div class="step_div">
+            <big>Ping命令详解</big>
+            <div class="step_div_half">
+                <p>    ping命令的应用格式：</p>
+                <p>①ping+IP地址或主机域名；</p>
+                <p>②ping+IP地址或主机域名+命令参数；</p>
+                <p>③ ping+命令参数+IP地址或主机域名 。</p>
+                <p>注意，“+”要换成空格！当我们使用第①种格式时，默认只发送四个数据包。</p>
+                <br>
+                <p>例如，我们来ping一下www.baidu.com这个地址。</p>
+                <p>119.75.217.109便是百度的其中一台主机的地址；</p>
+                <p>bytes表示发送数据包的大小，默认为32字节；</p>
+                <p>time表示从发出数据包到接受到返回数据包所用的时间；
+                <p>TTL表示生存时间值，该字段指定IP包被路由器丢弃之前允许通过的最大网段数量。</p>
+            </div>
+            <div class="step_div_half_right"></div>
+        </div>
+
+
+
+
+
+
+
+        <div class="step_div">
+            <big>交换机房的位置</big>
+            <div class="step_div_half_right">
+                <p>一校区：</p>
+                教一楼：214<br>
+                教二楼：电力系重点实验室<br>
+                教三楼：206<br>
+                教四楼：203<br>
+                学一舍：301<br>
+                学二舍：321<br>
+                学三舍：一楼值班室<br>
+                学四舍：3楼 300房间<br>
+                学五舍：三楼水房对过<br>
+                单身楼：110-2<br>
+                南拐楼：三楼楼道<br>
+                研究生公寓：312<br>
+                图书馆B：1楼弱电间<br>
+                校产楼：三楼楼道<br>
+                工会：工会活动室<br>
+                后勤小楼：浴室一楼、办公三楼<br>
+                科院办公室：四楼办公室<br>
+                餐饮小楼：二楼办公室<br>
+                接待中心：二楼监控室<br>
+                电子实验楼（旧图书馆）：三楼一个实验室<br>
+                校医院：二楼办公室<br>
+                综合楼：二楼网络间<br>
+            </div>
+            <div class="step_div_half">
+                <p>二校区：</p>
+                学六舍：129<br>
+                学七舍：130<br>
+                学八舍：303、（南楼和北楼）<br>
+                学九舍：四楼储物间<br>
+                学十舍：东侧：3层水房对面；西侧：三层木门无房号；<br>
+                学十一舍：三楼储物间<br>
+                学十二舍：三楼储物间<br>
+                学十三舍：三楼储物间<br>
+                学十四舍：三楼储物间<br>
+                学十五舍：三楼储物间<br>
+                学十六舍：三楼储物间<br>
+                学十七舍：三楼储物间<br>
+                学十八舍：三楼储物间<br>
+                教六楼：210<br>
+                教七楼：112<br>
+                教八楼：三层机械系办公室311<br>
+                教九楼：303、304<br>
+                教十楼：303<br>
+                教十一楼：A、B、D：三层弱电室；C：电教办公室  C307 需要到C207拿钥匙<br>
+                法政系：一楼资料室<br>
+                体训部：二楼办公室<br>
+                学工楼：1楼网络间（团委仓库，找张蓓蓓取钥匙）<br>
+                大学生服务中心：一楼洗衣房内最里的一个房间<br>
+                锅炉房：一楼<br>
+            </div>
+        </div>
+
+
+
+        <div class="step_div" id="operation_add">
+            <div style="margin: 10px 45%"><img src="Question_img/add.png" width="40px"></div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--<big></big>-->
+        <!--<div class="step_div">-->
+            <!--<div class="step_div_half">-->
+                <!--<p>1.</p>-->
+                <!--<p>2.</p>-->
+                <!--<p>3.</p>-->
+            <!--</div>-->
+            <!--<div class="step_div_half"></div>-->
+        <!--</div>-->
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div id="mask"></div>
+<div id="ID_div">
+    <div id="ID_title">身份认证</div>
+    <div class="ID_input">
+        <input class="ID_text_input" type="input" placeholder="姓名" />
+    </div>
+    <div class="ID_input">
+        <input class="ID_text_input" type="input" placeholder="口令" />
+    </div>
+    <div class="ID_input">
+        <a href="javascript:ID_submit()"><div class="ID_button">提交</div></a>
+        <a href="javascript:ID_close()"><div class="ID_button">取消</div></a>
+    </div>
+</div>
+<div id="notice_change_div">
+    <textarea id="notice_textarea" placeholder="公告内容"></textarea>
+    <button class="notice_submmit" id="notice_change_close" onclick="notice_change_close()">取消</button>
+    <button class="notice_submmit" onclick="notice_change_submmit()">提交</button>
+</div>
+<div id="operation_add_div">
+    从这里上传新的操作<br>
+    未完待续
+</div>
+<div id="problem_add_div">
+    从这里上传未解决的问题<br>
+    未完待续
+</div>
+
+
+</body>
+</html>

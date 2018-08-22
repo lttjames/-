@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JavaScript学习</title>
+</head>
+<body>
+//Javascript最开始是为了解决提交表单之后对表单内容进行格式审核返回后台信息慢的问题而创造的脚本语言
+//完整的Javascript是由语法和DOM组成的
+//typeof（变量）的功能就是返回变量的类型，他的返回值有可能是：string，number，Boolean，object，undefined，function
+//我们通常用console.log(变量)来检测变量的值
+//所以，我们在控制台当中写console.log(typeof(变量)）;就可以在控制台当中看到其类型
+
+//DOM意义就是获取前边元素的一个接口
+//基本的DOM查找方法
+//document.getElementByID("id");
+//document.getElementByTagName()返回一个对所有tag标签引用的合集，返回值是一个数组
+//比如我们把所有的li的内容，可以写成document.getElementById("list").getElementByTagName("#li");
+
+//如何给元素设置样式
+//格式是：element.style.styleName=styleValue;
+//要注意其中的的styleName中间不要写"-"，这个叫做驼峰形式
+//innerHTML
+//语法element.innerHtml
+//作用是获取element元素开始和结束标签之间的HTML
+//功能是设置element元素开始和结束标签之间的HTML
+
+
+//我们还可以更改一个元素的类
+//element.className="类名";
+
+//我们还可以通过DOM获取CSS属性
+//element.属性
+//像id，align这样的标准HTML属性都是可以从中得出的
+//如果是自己定义的属性，那么就不得不用element.getAttribute("属性名");
+//我们还可以设置HTML的属性
+//格式：element.setAttribute("属性名称","具体内容")
+//我们还可可以删除属性
+//格式：element.remove("属性名")；
+
+
+//DOM事件
+//在标签里边写：onload="function()"网页加载事件
+//onmouseover：鼠标划过事件
+//onmouseout：鼠标移出事件
+//onfcous：获得焦点时触发
+//我们对this还可以这么使用onmouseover="function(this)"
+
+
+
+//DOM0级事件
+//我们这个事件不是写到标签里边的
+//实例可以是一个按钮，最开始是锁定，点击之后变成解锁
+//js代码应该写在HTML之后
+//但是如果写在HTML的head里边也是可以的
+
+//在js代码中这样写window.onload=function(){}
+
+//焦点效果，比如一个文本框，在文本框激活的时候就显示“请输入正确的手机号码”
+//当不再以这个为标准，那么就对其进行判断，如果正确，那么就在后面放一个正确的小图标
+//
+<div id="test01" style="width: 100px ; height: 100px ; background-color: aqua"></div>
+<div>
+    <select id="menu">
+        <option value="">Color</option>
+        <option value="red" style="background-color: red" ></option>
+        <option value="blue" style="background-color: blue" ></option>
+        <option value="black" style="background-color: black" ></option>
+        <option value="green" style="background-color: green" ></option>
+    </select>
+</div>
+<style>
+    #menu{
+        border: none;
+    }
+</style>
+<script>
+    window.onload=changeColor;
+    function changeColor(){
+        var menu=document.getElementById("menu");
+        menu.onchange=function(){
+            var bgcolor=this.value;
+            if(bgcolor=="")return;
+            document.getElementById("test01").style.background=bgcolor;
+        }
+    }
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

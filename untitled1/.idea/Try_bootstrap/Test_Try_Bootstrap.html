@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width,initial-scale=1">
+    <title>响应式布局</title>
+</head>
+
+
+<body>
+
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    .heading,.container,.footing{
+        margin: 10px auto;
+    }
+    .heading{
+        height: 100px;
+        background-color: aqua;
+    }
+    .left,.media,.right{
+        background-color: darkblue;
+    }
+    .footing{
+        height: 100px;
+        background-color: cornflowerblue;
+    }
+    @media screen and (min-width: 960px) {
+        .heading,.footing,.container{
+            width: 960px;
+        }
+        .left,.media,.right{
+            float: left;
+            height: 500px;
+        }
+        .left,.right{
+            width: 200px;
+        }
+        .media{
+            margin: 10px 10px;
+            width: 400px;
+
+        }
+        .container{
+            height: 520px;
+        }
+    }
+</style>
+
+<div class="heading"></div>
+<div class="container">
+    <div class="left"></div>
+    <div class="media"></div>
+    <div class="right"></div>
+</div>
+<div class="footing"></div>
+
+
+</body>
+</html>

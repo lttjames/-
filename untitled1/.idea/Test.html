@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #content{
+            width: 100%;
+            height: 100%;
+            background: url("bgimage1.jpg") no-repeat;
+            background-size: cover;
+            z-index: 0;
+            position: absolute;
+        }
+        #OQSBox{
+            z-index: 10;
+            width: 100%;
+            height: 500px;
+            width: 80%;
+            margin: 0px auto;
+        }
+        #options{
+            width: 10%;
+            height: 100%;
+            float: left;
+            color: white;
+            background-color: paleturquoise;
+        }
+        #questions{
+            width: 30%;
+            height: 100%;
+            float: left;
+            color: white;
+            /*background-color: black;*/
+        }
+        #solutions{
+            width: 60%;
+            height: 100%;
+            float: left;
+            color: white;
+            /*background-color: black;*/
+        }
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body onload="thisTime()">
+<!--<div id="content">-->
+    <!--&lt;!&ndash;<button type="button" onclick="">展开/收缩</button>&ndash;&gt;-->
+<!--</div>-->
+<!--<div id="OQSBox">-->
+    <!--<div id="options">-->
+        <!--options-->
+    <!--</div>-->
+    <!--<div id="questions">-->
+        <!--questions-->
+    <!--</div>-->
+    <!--<div id="solutions">-->
+        <!--solutions-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+<style>
+    .div1{
+        width: 80%;
+        /*height: 300px;*/
+        border: dotted black;
+        margin: 10px auto;
+    }
+    .pclass1{
+        font-size: 30px;
+        margin-left: 10%;
+    }
+     .div1_1{
+         width: 100px;
+         height: 100px;
+         background-color: blueviolet;
+     }
+</style>
+<p class="pclass1">一些鼠标和文本框事件</p>
+<div class="div1">
+    <p>鼠标点击事件onClick</p>
+    <button onclick="demo11()">按钮1</button>
+    <p>鼠标经过和移出事件onmouseover和onmouseout</p>
+    <div class="div1_1" onmouseover="demo12(this)" onmouseout="demo13(this)"></div>
+    <p>文本框内容改变事件onchange</p>
+    <input type="text" onchange="demo14()">
+    <p>div更改背景颜色</p>
+    <div class="div1_1" onclick="change_color_to_red(this)"></div>
+    <p>除此之外，还有网页加载完成事件onload</p>
+</div>
+<script>
+    function demo11(){
+        alert("你点击了这里的按钮1")
+    }
+    function demo12(obj){
+        obj.innerHTML = "Hello";
+    }
+    function demo13(obj){
+        obj.innerHTML = "world";
+    }
+    function demo14(){
+        alert("内容已经发生了改变")
+    }
+    function change_color_to_red(obj){
+        obj.style.backgroundColor = "red";
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+<p class="pclass1">DOM操作HTML和CSS对象</p>
+<style>
+
+</style>
+<div class="div1">
+    <p>通过DOM操作CSS属性</p>
+    <div class="div1_1" id="div2_1" onclick="change_color_to_blue()">这里的文字单击后就会变成蓝色</div>
+    <p>下面使用句柄的方式来操作对象</p>
+    <p>添加句柄的方式才是前端开发当中最常用的方式，因为很多的句柄之间不影响使用。</p>
+    <button id="div2_2">Click Here For More Information</button>
+    <p>当然这里的句柄也是可以用removeEventListener（）移除的</p>
+</div>
+<script>
+    function change_color_to_blue(){
+        document.getElementById("div2_1").style.color = "blue" ;
+    }
+    var x=document.getElementById("div2_2");
+    x.addEventListener("click",demo21);
+    x.addEventListener("click",demo22);
+    function demo21(){
+        alert("hello");
+    }
+    function demo22(){
+        alert("world")
+    }
+</script>
+
+
+
+
+
+
+<p class="pclass1">事件流</p>
+<div class="div1">
+    <p>这里写出了DOM操作点击之后弹出对话框的另外一种方式</p>
+    <button id="div3_1">Click Here</button>
+</div>
+<script>
+    var a=document.getElementById("div3_1");
+    a.onclick = function (){alert("用JS弹出对话框的另一种方式");}
+</script>
+
+
+
+
+
+
+
+<p class="pclass1">这里用JS来创建对象</p>
+<div class="div1">
+    <p>例如people的类的声明如下</p>
+    <p>function people(name,age){</p>
+    <p>        this.name=name;</p>
+    <p>        this.age=age;</p>
+    <p>    }</p>
+    <p>son = new people("louis",20);</p>
+</div>
+<script>
+//    下面是对象的第一种创建方式
+//    people = new Object();
+//    people.name="Louis";
+//    people.age =20;
+//    document.write("name:"+people.name+" age:" +people.age);
+//    下面是对象的第二种创建方式
+//    function people(name,age){
+//        this.name=name;
+//        this.age=age;
+//    }
+//    son = new people("louis",20);
+</script>
+
+
+
+
+
+
+
+
+<p class="pclass1">String类的对象</p>
+<div class="div1">
+    <p>str.indexOf("hello")显示hello的位置</p>
+    <p>str.lenth显示字符串的长度</p>
+    <p>str.match("hello")存在的话就会把字符串返回，如果没有就会返回null</p>
+    <p>str.replace("hello","world")替换字符串</p>
+    <p>str.toUpperCase()把所有字母变成大写</p>
+    <p>str.toLowerCase()把所有的字母变成小写</p>
+    <p>str.slit(",")以逗号为分隔符将字符串分成几个字符串组成的字符数组</p>
+</div>
+
+
+
+
+
+
+
+
+<p class="pclass1">Date类的对象</p>
+<div class="div1">
+    <p>用document.write(date)可以直接把当前的年月日获取出来</p>
+    <p>date.getFullYear()获取到当前的年份</p>
+    <p>getDay（）获取到星期几</p>
+    <p>getHours()/getMinutes()/getSeconds()获取到当前的小时，分钟，秒钟</p>
+    <br>
+    <p>下面我们用div承载一个走秒的时钟</p>
+    <div id="time"></div>
+</div>
+<script>
+    function thisTime(){
+        var today = new Date();
+        var hour = today.getHours();
+        var min = today.getMinutes();
+        var sec = today.getSeconds();
+        min = checkTime(min);
+        sec = checkTime(sec);
+        document.getElementById("time").innerHTML = hour+":"+min+":"+sec;
+            setTimeout(function(){
+            thisTime();
+        },1000);
+    }
+    function checkTime(t){
+        if(t<10){
+            t="0"+t;
+        }
+        return t;
+    }
+</script>
+
+
+
+
+
+
+<p class="pclass1">数组的操作</p>
+<div class="div1">
+    <p>concat():合并数组  var c=a.concat(b)</p>
+    <p>sort():对字符/数字 数组进行排序 默认升序  document.write(a.sort());</p>
+    <p>sort():对字符/数字 数组进行排序 如果降序  document.write(a.sort(a,b){return b-a;});</p>
+</div>
+
+
+
+
+
+
+
+
+<p class="pclass1">用DOM控制HTML对象</p>
+<div class="div1">
+    <p>用setAttribute设置属性</p>
+    <div id="div41"></div>
+    <p>用createElement()可以创建节点</p>
+    <p>用createTextNode可以创建文本节点</p>
+    <p>用insertBefore()可以插入节点</p>
+    <p>用removeChild()可以删除节点</p>
+    <p>用offsetHeight()可以设置网页尺寸</p>
+    <p>用scrollHeight()可以设置网页尺寸</p>
+</div>
+<script>
+    function demo41(){
+        var b = document.getElementById("div41");
+        b.setAttribute("title","动态设置该元素的title属性");
+    }
+</script>
+
+
+
+
+
+
+<p class="pclass1">Windows对象操作</p>
+<div class="div1">
+    <p>获取当前窗口的宽度和高度</p>
+    <div id="div51"></div>
+    <p>通过window打开一个新的窗口</p>
+    <button id="button51" onclick="demo51()">百度</button>
+    <p>下面用setInterval()让一个方法每间隔几秒钟执行一次</p>
+    <button onclick="">点击此处间隔1秒执行一个方法</button>
+    <p id="p51"></p>
+    <br>
+    <p>下面用setTimeout延时执行一段代码</p>
+    <button onclick="demo53()">延时1秒弹出对话框</button>
+</div>
+<script>
+    var c = document.getElementById("div51");
+    c.innerHTML = "宽度："+window.innerWidth+"  高度："+window.innerHeight;
+    function demo51(){
+        window.open("Test_Transition.html");
+    }
+
+    var mytime = setInterval(function(){
+        demo52_getTime();
+    },1000);
+    function demo52_getTime(){
+        var e= new Date();
+        var f= e.toLocaleDateString();
+        var g= e.toLocaleTimeString();
+        document.getElementById("p51").innerHTML=f+g;
+    }
+    function demo53(){
+        setTimeout(function(){alert("间隔一秒弹出对话框");},1000);
+    }
+</script>
+
+
+<style>
+    .imgbox{
+        width: 200px;
+        float: left;
+        border: solid 1px black;
+        margin: 5px;
+    }
+    .imgbox img{
+        width: 200px;
+        margin: 5px auto;
+    }
+</style>
+<p class="pclass1">JS实现瀑布流效果</p>
+<div class="div1" style="height: 620px">
+    <div class="imgbox">
+        <img src="Test_image/1.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/2.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/3.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/4.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/5.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/6.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/7.jpg">
+    </div>
+    <div class="imgbox">
+        <img src="Test_image/8.jpg">
+    </div>
+</div>
+
+
+
+<p class="pclass1">这里是jQuery的一些动画效果</p>
+<div class="div1">
+    <div class="div1_1" id="div61"></div>
+    <button id="hide_button">隐藏方块</button>
+    <button id="show_button">显示方块</button>
+    <button id="toggle_button">显示/隐藏</button>
+    <button id="fadein_button">淡入</button>
+    <button id="fadeout_button">淡出</button>
+    <button id="fadetoggle_button">淡入/淡出</button>
+    <div class="div1_1" id="div62"></div>
+    <button id="flip_show">滑动出现</button>
+    <button id="flip_hide">滑动隐藏</button>
+    <button id="flip_toggle">隐藏/出现</button>
+</div>
+<script>
+    $(document).ready(function(){
+        $("#hide_button").click(function(){
+            $("#div61").hide(1000);
+        });
+        $("#show_button").click(function(){
+            $("#div61").show(1000);
+        });
+        $("#toggle_button").click(function(){
+            $("#div61").toggle(1000);
+        });
+        $("#fadein_button").click(function(){
+            $("#div61").fadeIn(1000);
+        });
+        $("#fadeout_button").click(function(){
+            $("#div61").fadeOut(1000);
+        });
+        $("#fadetoggle_button").click(function(){
+            $("#div61").fadeToggle(1000);
+        });
+        $("#flip_show").click(function(){
+            $("#div62").slideDown(1000);
+        });
+        $("#flip_hide").click(function(){
+            $("#div62").slideUp(1000);
+        });
+        $("#flip_toggle").click(function(){
+            $("#div62").toggle(1000);
+        });
+    });
+</script>
+
+
+<p class="pclass1">下面用Ajax上线一个代码块</p>
+<div class="div1">
+    <div></div>
+</div>
+<script>
+
+</script>
+
+<script type="text/javascript">
+    function diag()
+    {
+        var str=prompt("随便写点儿啥吧","比如我叫啥");
+        if(str)
+        {
+            alert("您刚输入的是："+ str)
+        }
+    }
+    $("#dialog_show").dialog({
+        autoOpen: false,
+        bgiframe: true,
+        height: 600,
+        width:500,
+        modal: true,
+        resizable:true
+    });
+</script>
+<div id="dialog_show">这里你可以自己写个表单
+    <p>什么问题？</p>
+    <input>
+    <p>怎么解决</p>
+    <input>
+</div>
+<p>
+    <input type="submit" value="Sumit" name="Su1" onclick="diag()" />
+</p>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
