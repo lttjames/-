@@ -1,4 +1,4 @@
-var tabs = document.querySelectorAll('.linestyle li a');
+var tabs = document.querySelectorAll('#direction li a');
 var panels = document.querySelectorAll('#categray .kinds');
 
 for(var i = 0; i < tabs.length; i++) 
