@@ -121,12 +121,18 @@ a.itembeginning{
     width: 100%;
     height: 60px;
     color: white;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     border-top:1px #ccc solid; 
+    text-align: center;
+    background: darkslategrey;
 }
 #footer a{
-    font-size: 14px;
-    text-decoration: none;
-    color: blue;
+    font-size: 1em;
+    color: rgb(164, 255, 155);
+}
+#footer p{
+    font-size: 30px;
+    font-family: 华文行楷;
+    margin-top: 0px;
 }
