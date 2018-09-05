@@ -74,3 +74,13 @@ h2{
 .itembeginning{
     background-color: white;
 }
+#content{
+    width: 1000px;
+    margin: 0 auto;
+}
+article{
+    display: none;
+}
+.showing{
+    display: block;
+}
