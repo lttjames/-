@@ -73,6 +73,10 @@ h2{
 }
 .itembeginning{
     background-color: white;
+    height: 60px;
+    line-height: 60px;
+    width: 80px;
+    text-align: center;
 }
 #content{
     width: 1000px;
@@ -83,4 +87,19 @@ article{
 }
 .showing{
     display: block;
+}
+#footer{
+    height: 50px;
+    border-top: 1px #ccc solid;
+    color: aliceblue;
+    font-size: 20px;
+    text-align: center;
+}
+#footer a{
+    text-decoration: none;
+    color: lightblue;
+    background: linear-gradient(to top, gray, grey );
+}
+#footer a:hover{
+    background: black;
 }
