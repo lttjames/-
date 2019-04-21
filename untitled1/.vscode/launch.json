@@ -10,7 +10,7 @@
         "request": "launch",
         "timeout": 60000,
         "name": "Launch Chrome",
-        "url": "C:/Users/Administrator/Desktop/untitled1",
+        "url": "C:/Users/李腾/Documents/GitHub/-/untitled1",
         "webRoot": "${workspaceFolder}/untitled1"
     },
         {
