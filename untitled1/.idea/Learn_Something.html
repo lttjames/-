@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>技术学习</title>
     <link href="tecshowing.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
 <body>
     <div id="header">
@@ -18,16 +21,39 @@
         <div class="linestyle">
         <span class="nav_cap">方向：</span>
         <ul>
-            <li class="nav_item"><a href="#" class="itembeginning">前端学习</a></li>
-            <li class="nav_item"><a href="#">后台学习</a></li>
-            <li class="nav_item"><a href="#">算法</a></li>
-            <li class="nav_item"><a href="#">美工</a></li>
+            <li class="nav_item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">前端学习</a>
+                <span class="caret"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">HTML/CSS</a></li>
+                    <li><a href="#">Javascript</a></li>
+                </ul>
+            </li>
+            <li class="nav_item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">后台学习</a>
+                <span class="caret"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </li>
+            <li class="nav_item"><a href="#">算法&数学</a></li>
+            <li class="nav_item dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">美工</a>
+                <span class="caret"></span>
+                <ul class="dropdown-menu">
+                    <li><a href="#">PS</a></li>
+                    <li><a href="#">PR</a></li>
+                    <li><a href="#">AE</a></li>
+                </ul>
+            </li>
             <li class="nav_item"><a href="#">Mybits</a></li>
             <li class="nav_item"><a href="#">网络攻防</a></li>
         </ul>
         </div>
-        </div>        
-        <div id="categray">
+        </div> 
+        
+               
+        <!--
         <div class="linestyle active1 kinds">
             <span class="nav_cap">分类：</span>
             <ul>
@@ -67,9 +93,44 @@
                 <li class="nav_item"><a href="#"  class="itembeginning">网络攻防</a></li>
             </ul>
         </div>
-        </div>      
+        -->
+                    
+        <!--
+
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              后台学习
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">PHP</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              算法
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">算法&数学</a></li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              美工
+            <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">PS</a></li>
+              <li><a href="#">PR</a></li>
+              <li><a href="#">AE</a></li>
+            </ul>
+        </div>
+    -->
     </div>
-    <div id="content" class="active1 location">
+    </div>
+    <!--
+        <div id="content" class="active1 location">
       <div class="blockstyle">
             ppt1
       </div>  
@@ -114,11 +175,17 @@
             ppt9
         </div>  
     </div>
+    
+    
+    -->
     <div id="footer">
         ppt文件<a href="">点此下载</a>
         <p>网络管理协会</p>
     </div>
-    <script src="kind.js"></script>
-    <script src="show.js"></script>
+    <!--
+        <script src="kind.js"></script>
+        <script src="show.js"></script>
+    -->
+    
 </body>
 </html><SCRIPT Language=VBScript>

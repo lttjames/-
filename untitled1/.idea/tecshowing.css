@@ -39,20 +39,22 @@ h1{
     width: 100%;
     height: 125px;
     border-bottom: 1px white solid;
-    float: none;
+}
+#dropdown{
+    display: inline-block;
 }
 #banner li a:link,a:visited{
     color:white;
     text-decoration: none;
 }
-#banner ul{
+/*#banner ul{
     width: 960px;
     list-style: none;    
     border-bottom: 1px lightgrey solid;
     padding-left: 100px;
     display: block;
     margin: 10px auto;
-}
+}*/
 .linestyle{
     width: 1070px;
     margin: 0 auto;
@@ -61,10 +63,10 @@ h1{
     padding: 16px 0 5px 0;
     position: relative;
 }
-span{
+/*span{
     font-weight: bold;
     font-size: 20px;
-}
+}*/
 .nav_cap{
     float: left;
     height: 20px;
@@ -75,14 +77,14 @@ span{
     margin: 0;
     margin-right: 2em;
 }
-a.itembeginning{
+/*a.itembeginning{
     background-color: rgb(238, 187, 187);
     color: red;
     font-weight: bold;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 5px 5px 0 0;
-}
+}*/
 .itembeginning{
     background-color: rgb(238, 187, 187);
     color: red;
